@@ -30,3 +30,24 @@ img{
     padding-left: 0px !important;
    
 }
+#searchbtn{
+    background-color:#6282ff;
+    color: white;
+}
+h2{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.row{
+    /* padding: 10px; */
+}
+.card-title{
+    font-family: 'Pacifico', cursive;
+}
+ul{
+    /* float: right;
+    margin-right: 370px; */
+    font-family:'Times New Roman', Times, serif;
+
+}
