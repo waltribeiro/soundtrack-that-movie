@@ -34,10 +34,17 @@ document.getElementById('searchButtonForm').addEventListener("submit", function(
 });
 
 
-
-
-
 // Go through the JSON form and pull data from the Objects
+
 // send that to each respective <div> elements
 
+// var newDiv = document.createElement("div");
+//     newDiv.textContent = "hello";
+//     newDiv.className = "--";
+//         $("#nameTom").append(newDiv);
 
+// empty <div> tags in HTML with ID
+// use selectors to grab the ID
+// use .text to display the results (or .textContent with Javascript)
+
+// .fadeIn( [duration ] [, complete ] )
