@@ -1,46 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="project1.css">
+    <link href="https://fonts.googleapis.com/css?family=Timmana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <div class="container border-bottom">
+        <div class="row p-10">
+            <div class="col-8">
+                <div class="jumbotron jumbotron-fluid" class="d-flex justify-content-start">
+                    <div class="text-responsive">
+                        <h1 class="display-4">What's That <span class="display-5">Song?</span><h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 ml-20">
+                <img src="wireframe-whats-that-song-square.png" class="img-fluid" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light bg-light">
+        <form id="searchButtonForm" class="form-row">
+            <input id="searchButtonInput" class="form-control mr-sm-2 col-8" type="search" placeholder="Movie Search"
+                aria-label="Search">
+            <button id="searchButton" class="btn btn-outline-success mx-2 my-sm-0 col-auto" type="submit">Search</button>
+        </form>
+    </nav>
+    <h2>Movie Results:</h2>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-12 col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="float-left">
+                        <h5 class="card-title">Movie Title</h5>
+                        <img src="https://via.placeholder.com/150" alt="image">
+                    </div>
+                        <ul class="float-left">
+                            <li>Year:</li>
+                            <li>Title:</li>
+                            <li>Soundtrack:</li>
+                            <li>Song:</li>
+                            <li>Actors:</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-  <form class="form-inline" id="searchButtonForm">
-
-    <input
-    id="searchButtonInput"
-    style="width:70%;display:flex"
-    class="form-control search"
-    type="search"
-    placeholder="Search for a city"
-    aria-label="Search">
-    
-    <button
-    id="searchButton"
-    style="width:20%;display:flex;margin:0px;margin-left:10px;"
-    class="btn btn-primary my-2 my-sm-0"
-    type="submit"
-    >
-    
-    <i class="fas fa-search"></i></button>
-
-  </form>
-<div id="nameTom"></div>
-
-  <div class="alert alert-danger" role="alert">
-
-  </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script rel="javascript" src="js/script.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script rel="javascript" src="js/script.js"></script>
 </body>
+
 </html>
