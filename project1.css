@@ -30,7 +30,7 @@ img{
     padding-left: 0px !important;
    
 }
-#searchbtn{
+#searchbutton{
     background-color:#6282ff;
     color: white;
 }
@@ -49,5 +49,8 @@ ul{
     /* float: right;
     margin-right: 370px; */
     font-family:'Times New Roman', Times, serif;
-
+    margin-top: 50px;
+}
+div.card-body{
+ padding-left: 10px;
 }
