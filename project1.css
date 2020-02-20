@@ -1,3 +1,4 @@
+
 .jumbotron{
     background-color: white !important;
     margin-bottom: 0rem !important;
@@ -53,4 +54,18 @@ ul{
 }
 div.card-body{
  padding-left: 10px;
+ 
+}
+/* #searchButtonForm{
+ width: 450px;
+ 
+/* } */
+#searchButton{
+    width: 100px;
+}
+.visible{
+    visibility:visible;
+}
+.invisible{
+    visibility: hidden;
 }

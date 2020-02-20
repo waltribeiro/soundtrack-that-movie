@@ -28,21 +28,23 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-light bg-light">
-        <form id="searchButtonForm" class="form-row">
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">
+        <form id="searchButtonForm" class="form-row"style="width:700px">
             <input id="searchButtonInput" class="form-control mr-sm-2 col-8" type="search" placeholder="Movie Search"
                 aria-label="Search">
             <button id="searchButton" class="btn btn-outline-success mx-2 my-sm-0 col-auto" type="submit">Search</button>
         </form>
-    </nav>
-    <h2>Movie Results:</h2>
-    <section class="container">
+    </nav> </div>
+    
+    <div class="invisible"><h2>Movie Results:</h2></div>
+    <section id="test" type="test" class="invisible">
         <div class="row">
             <div class="col-md-12 col-12">
                 <div class="card">
                     <div class="card-body">
                         <div class="float-left">
-                        <h5 class="card-title">Movie Title</h5>
+                        <h5 id="titleEl" class="card-title"></h5>
                         <img src="https://via.placeholder.com/150" alt="image">
                     </div>
                         <ul class="float-left">
