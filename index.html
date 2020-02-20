@@ -27,7 +27,7 @@
                 <img src="wireframe-whats-that-song-square.png" class="img-fluid" alt="Responsive image">
             </div>
         </div>
-    </div>
+
     <nav class="navbar navbar-light bg-light">
         <form id="searchButtonForm" class="form-row">
             <input id="searchButtonInput" class="form-control mr-sm-2 col-8" type="search" placeholder="Movie Search"
@@ -43,20 +43,23 @@
                     <div class="card-body">
                         <div class="float-left">
                         <h5 class="card-title">Movie Title</h5>
-                        <img src="https://via.placeholder.com/150" alt="image">
+                        <img id="omdbPoster" src="https://via.placeholder.com/150" alt="image">
+                        <h3 id="omdbAlert"></h3>
                     </div>
                         <ul class="float-left">
-                            <li>Year:</li>
-                            <li>Title:</li>
-                            <li>Soundtrack:</li>
-                            <li>Song:</li>
-                            <li>Actors:</li>
+                            <li id="omdbYear"><strong>Year: </strong></li>
+                            <li id="omdbTitle"><strong>Title: </strong></li>
+                            <li id="omdbSoundtrack"><strong>Soundtrack: </strong></li>
+                            <li id="omdbSong"><strong>Song: </strong></li>
+                            <li id="omdbActors"><strong>Actors: </strong></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="nameTom"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script rel="javascript" src="js/script.js"></script>
