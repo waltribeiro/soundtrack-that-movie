@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="project1.css">
     <link href="https://fonts.googleapis.com/css?family=Timmana&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -33,38 +34,59 @@
     <div class="container">
         <nav class="navbar navbar-light bg-light">
             <form id="searchButtonForm" class="form-row" style="width:700px">
-                <input id="searchButtonInput" class="form-control mr-sm-2 col-8" type="search"
+                <input id="searchButtonInput" class="form-control mr-sm-2 col-9" type="search"
                     placeholder="Movie Search" aria-label="Search">
                 <button id="searchButton" class="btn btn-outline-success mx-2 my-sm-0 col-auto"
                     type="submit">Search</button>
             </form>
         </nav>
     </div>
-    <div class="invisible">
-        <h2>Movie Results:</h2>
-    </div>
-    <section id="test" type="test" class="invisible">
-        <div class="row">
-            <div class="col-md-12 col-12">
-                <div class="card">
+    <div class="row">
+        <div class="col-xs-8 offset-2">
+            <div id="welcome" class="visible" class="container">
+                <div class="card w-75">
                     <div class="card-body">
-                        <div class="float-left">
-                            <h5 id="titleEl" class="card-title"></h5>
-                            <img id="omdbPoster" src="https://via.placeholder.com/150" alt="image">
-                            <h3 id="omdbAlert"></h3>
-                        </div>
-                        <ul class="float-left">
-                            <li><strong>Year: </strong><span id="omdbYear"></span></li>
-                            <li><strong>Title: </strong><span id="omdbTitle"></span></li>
-                            <li><strong>Soundtrack: </strong><span id="omdbSoundtrack"></span></li>
-                            <li><strong>Song: </strong><span id="omdbSong"></span></li>
-                            <li><strong>Actors: </strong><span id="omdbActors"></span></li>
-                        </ul>
+                        <h5 class="card-title"><strong>
+                                <p>Welcome to "Soundtrack that Movie!"</p>
+                            </strong>
+                            <p class="card-text">Soundtrack that Movie, gives you direct access to the soundtracks from
+                                your favorite movies.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <!------------------------------------------------------------------------------------------------->
+    <div class="row">
+        <div class="col-xs-8 offset-1">
+            <div id="resultInfo" class="invisible">
+                <h2>Movie Results:</h2>
+            </div>
+            <section id="test" type="test" class="invisible">
+                <div class="row">
+                    <div class="col-md-12 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="float-left">
+                                    <h5 id="titleEl" class="card-title"></h5>
+                                    <img id="omdbPoster" src="https://via.placeholder.com/150" alt="image">
+                                    <h3 id="omdbAlert"></h3>
+                                </div>
+                                <ul class="float-left">
+                                    <li><strong>Year: </strong><span id="omdbYear"></span></li>
+                                    <li><strong>Title: </strong><span id="omdbTitle"></span></li>
+                                    <li><strong>Soundtrack: </strong><span id="omdbSoundtrack"></span></li>
+                                    <li><strong>Song: </strong><span id="omdbSong"></span></li>
+                                    <li><strong>Actors: </strong><span id="omdbActors"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div class="col-xs-12">
+    </div>
+
 
     <div id="nameTom"></div>
 
