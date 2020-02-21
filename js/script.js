@@ -1,5 +1,5 @@
-var apiKeyYoutube = "AIzaSyCeb5HlrnsOhcdQDoC91dpbZe2Wo_Onibo"
-var apiKeyOMDB = "a648d87c"
+var apiKeyYoutube = "AIzaSyCeb5HlrnsOhcdQDoC91dpbZe2Wo_Onibo";
+var apiKeyOMDB = "a648d87c";
 
 // working string = http://www.omdbapi.com/?t=rocky&apikey=a648d87c
 
@@ -8,14 +8,24 @@ var apiKeyOMDB = "a648d87c"
 document.getElementById('searchButtonForm').addEventListener("submit", function(event) {
   event.preventDefault();
   var searchValue = document.getElementById("searchButtonInput").value;
-  var omdbQueryURL = "http://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
+  var omdbQueryURL = "http://www.omdbapi.com/?t=" + searchValue + "+&apikey=" + apiKeyOMDB;
+  var youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=id&q=" + searchValue + "%20ost" + "&type=video" + "&key=" + apiKeyYoutube + "&maxResults=5";
+  
+  
   var searchButton
   var searchButtonInput
   var searchButtonForm
 
   console.log(searchValue)
 
-  // takes that string and sends it as an API call to OMDB
+   //takes that string and sends it as an API call to OMDB
+  $.ajax({
+    url: youtubeQueryURL,
+    method: "GET",
+  }).then(function(results){
+    console.log(results);
+    console.log(youtubeQueryURL);
+  });
 
   $.ajax({
     url: omdbQueryURL,
