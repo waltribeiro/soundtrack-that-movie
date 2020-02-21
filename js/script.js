@@ -30,10 +30,26 @@ document.getElementById('searchButtonForm').addEventListener("submit", function(
     let songArray = ((results.items[0].snippet.title).split(', '));
     let songArray2 = ((results.items[1].snippet.title).split(', '));
     let songArray3 = ((results.items[2].snippet.title).split(', '));
+    var videoURL = 'https://www.youtube.com/watch?v='
+    var videoID = results.items[0].id.videoId;
+    var videoID2 = results.items[1].id.videoId;
+    var videoID3 = results.items[2].id.videoId;
+    var fullLink = videoURL + videoID;
+    var fullLink2 = videoURL + videoID2;
+    var fullLink3 = videoURL + videoID3;
+
     for(let i = 0; i < songArray.length; i++) {
-      $('#omdbSoundtrack').append("<br />&nbsp;&nbsp;&nbsp;&nbsp;")
-      $('#omdbSoundtrack').append(songArray[i], '<br />&nbsp;&nbsp;&nbsp;&nbsp;', songArray2[i] );
-    }
+      $('#omdbSoundtrack').append("<br />")
+      $('#omdbSoundtrack').append('&nbsp;&nbsp;&nbsp;&nbsp;' + "<a href=\"" + fullLink + "\">link</a>&nbsp;" + songArray[i] + '<br />&nbsp;&nbsp;&nbsp;&nbsp;' + "<a href=\"" + fullLink2 + "\">link</a>&nbsp;" + songArray2[i] + '<br />&nbsp;&nbsp;&nbsp;&nbsp;' + "<a href=\"" + fullLink3 + "\">link</a>&nbsp;" + songArray3[i]);
+    };
+
+
+    console.log(videoURL + videoID)
+    // console.log(results.items[0].id.videoId);
+    
+    songArray.onclick = function(){
+      window.open(videoURL + videoID, '_blank');
+    };
   });
 
   $.ajax({
