@@ -15,53 +15,59 @@
 
 <body>
     <!-- <div class="container border-bottom"> -->
-        <div class="row p-10">
-            <div class="col-8">
-                <div class="jumbotron jumbotron-fluid" class="d-flex justify-content-start">
-                    <div class="text-responsive">
-                        <h1 class="display-4">What's That <span class="display-5">Song?</span><h1>
-                    </div>
+    <div class="row p-10">
+        <div class="col-8">
+            <div class="jumbotron jumbotron-fluid" class="d-flex justify-content-start">
+                <div class="text-responsive">
+                    <h1 class="display-4">What's That <span class="display-5">Song?</span>
+                        <h1>
                 </div>
             </div>
-            <div class="col-4 ml-20">
-                <img src="wireframe-whats-that-song-square.png" class="img-fluid" alt="Responsive image">
-            </div>
+        </div>
+        <div class="col-4 ml-20">
+            <img src="wireframe-whats-that-song-square.png" class="img-fluid" alt="Responsive image">
         </div>
     </div>
     <div class="container">
         <nav class="navbar navbar-light bg-light">
-        <form id="searchButtonForm" class="form-row"style="width:700px">
-            <input id="searchButtonInput" class="form-control mr-sm-2 col-8" type="search" placeholder="Movie Search"
-                aria-label="Search">
-            <button id="searchButton" class="btn btn-outline-success mx-2 my-sm-0 col-auto" type="submit">Search</button>
-        </form>
-    </nav> </div>
-    
-    <div class="invisible"><h2>Movie Results:</h2></div>
-    <section id="test" type="test" class="invisible">
-       <div class="row">
-            <div class="col-md-12 col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="float-left">
-                        <h5 id="titleEl" class="card-title"></h5>
-                        <img src="https://via.placeholder.com/150" alt="image">
-                    </div>
-                        <ul class="float-left">
-                            <li>Year:</li>
-                            <li>Title:</li>
-                            <li>Soundtrack:</li>
-                            <li>Song:</li>
-                            <li>Actors:</li>
-                        </ul>
+            <form id="searchButtonForm" class="form-row" style="width:700px">
+                <input id="searchButtonInput" class="form-control mr-sm-2 col-8" type="search"
+                    placeholder="Movie Search" aria-label="Search">
+                <button id="searchButton" class="btn btn-outline-success mx-2 my-sm-0 col-auto"
+                    type="submit">Search</button>
+            </form>
+        </nav>
+    </div>
+    <div class="invisible">
+        <h2>Movie Results:</h2>
+    </div>
+        <section id="test" type="test" class="invisible">
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="float-left">
+                                <h5 id="titleEl" class="card-title"></h5>
+                                <img id="omdbPoster" src="https://via.placeholder.com/150" alt="image">
+                                <h3 id="omdbAlert"></h3>
+                            </div>
+                            <ul class="float-left">
+                                <li><strong>Year: </strong><span id="omdbYear"></span></li>
+                                <li ><strong>Title: </strong><span id="omdbTitle"></span></li>
+                                <li ><strong>Soundtrack: </strong><span id="omdbSoundtrack"></span></li>
+                                <li ><strong>Song: </strong><span id="omdbSong"></span></li>
+                                <li ><strong>Actors: </strong><span id="omdbActors"></span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script rel="javascript" src="js/script.js"></script>
+        <div id="nameTom"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script rel="javascript" src="js/script.js"></script>
 </body>
 
 </html>
