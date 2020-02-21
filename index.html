@@ -11,47 +11,54 @@
     <link rel="stylesheet" href="project1.css">
     <link href="https://fonts.googleapis.com/css?family=Timmana&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <!-- <div class="container border-bottom"> -->
-        <div class="row p-10">
-            <div class="col-8">
-                <div class="jumbotron jumbotron-fluid" class="d-flex justify-content-start">
-                    <div class="text-responsive">
-                        <h1 class="display-4">What's That <span class="display-5">Song?</span><h1>
-                    </div>
+    <div class="row p-10">
+        <div class="col-8">
+            <div class="jumbotron jumbotron-fluid" class="d-flex justify-content-start">
+                <div class="text-responsive">
+                    <h1 class="display-4">SoundTrack that <span class="display-5">Movie!</span>
+                        <h1>
                 </div>
             </div>
-            <div class="col-4 ml-20">
-                <img src="wireframe-whats-that-song-square.png" class="img-fluid" alt="Responsive image">
-            </div>
         </div>
-
-    <nav class="navbar navbar-light bg-light">
-        <form id="searchButtonForm" class="form-row">
-            <input id="searchButtonInput" class="form-control mr-sm-2 col-8" type="search" placeholder="Movie Search"
-                aria-label="Search">
-            <button id="searchButton" class="btn btn-outline-success mx-2 my-sm-0 col-auto" type="submit">Search</button>
-        </form>
-    </nav>
-    <h2>Movie Results:</h2>
-    <section class="container">
+        <div class="col-4 ml-20">
+            <img src="wireframe-whats-that-song-square.png" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">
+            <form id="searchButtonForm" class="form-row" style="width:700px">
+                <input id="searchButtonInput" class="form-control mr-sm-2 col-8" type="search"
+                    placeholder="Movie Search" aria-label="Search">
+                <button id="searchButton" class="btn btn-outline-success mx-2 my-sm-0 col-auto"
+                    type="submit">Search</button>
+            </form>
+        </nav>
+    </div>
+    <div class="invisible">
+        <h2>Movie Results:</h2>
+    </div>
+    <section id="test" type="test" class="invisible">
         <div class="row">
             <div class="col-md-12 col-12">
                 <div class="card">
                     <div class="card-body">
                         <div class="float-left">
-                        <h5 class="card-title">Movie Title</h5>
-                        <img id="omdbPoster" src="https://via.placeholder.com/150" alt="image">
-                        <h3 id="omdbAlert"></h3>
-                    </div>
+                            <h5 id="titleEl" class="card-title"></h5>
+                            <img id="omdbPoster" src="https://via.placeholder.com/150" alt="image">
+                            <h3 id="omdbAlert"></h3>
+                        </div>
                         <ul class="float-left">
-                            <li id="omdbYear"><strong>Year: </strong></li>
-                            <li id="omdbTitle"><strong>Title: </strong></li>
-                            <li id="omdbSoundtrack"><strong>Soundtrack: </strong></li>
-                            <li id="omdbSong"><strong>Song: </strong></li>
-                            <li id="omdbActors"><strong>Actors: </strong></li>
+                            <li><strong>Year: </strong><span id="omdbYear"></span></li>
+                            <li><strong>Title: </strong><span id="omdbTitle"></span></li>
+                            <li><strong>Soundtrack: </strong><span id="omdbSoundtrack"></span></li>
+                            <li><strong>Song: </strong><span id="omdbSong"></span></li>
+                            <li><strong>Actors: </strong><span id="omdbActors"></span></li>
                         </ul>
                     </div>
                 </div>
