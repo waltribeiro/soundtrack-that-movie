@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="project1.css">
+    
+    <script src="https://kit.fontawesome.com/c865f3e4f6.js" crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Timmana&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -18,16 +21,21 @@
 <body>
     <!-- <div class="container border-bottom"> -->
     <div class="row p-10">
-        <div class="col-8">
+        <div class="col-8" style="z-index: 1">
             <div class="jumbotron jumbotron-fluid" class="d-flex justify-content-start">
                 <div class="text-responsive">
                     <h1 class="display-4">SoundTrack that <span class="display-5">Movie!</span>
-                        <h1>
+                    </h1>
                 </div>
             </div>
         </div>
-        <div class="col-4 ml-20">
-            <img src="wireframe-whats-that-song-square.png" class="img-fluid" alt="Responsive image">
+        <div class="col-4" style="z-index: 0" data-toggle="modal" data-target="#myModal">
+            <span class="pBlue d-inline-block spinAnimation"></span>
+            <span class="pGray d-inline-block spinAnimation"></span>
+            <span class="pRed d-inline-block spinAnimation"></span>
+        </div>
+        <div class="col-4 ml-20 img-fluid">
+            <!-- <img src="wireframe-whats-that-song-square.png" class="img-fluid" alt="Responsive image"> -->
         </div>
     </div>
     <div class="container">
@@ -40,7 +48,9 @@
             </form>
         </nav>
     </div>
-    <div class="invisible">
+    
+
+        <div class="invisible">
         <h2>Movie Results:</h2>
     </div>
     <section id="test" type="test" class="invisible">
@@ -68,6 +78,72 @@
 
     <div id="nameTom"></div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Development Team</h4>
+                </div>
+            
+            <!-- Modal body -->
+                <div class="modal-body">
+                    <strong>FRONTEND - HTML / CSS</strong>
+                    <br>
+                        <a href="https://github.com/trionb" target="blank">
+                            <i class='fas fa-link fa-1x'></i></a> Trion Bailey<br>
+                        <a href="https://github.com/tlomax111" target="blank">
+                            <i class='fas fa-link fa-1x'></i></a> Toni Lomax<br>
+                            <br>
+
+                    <strong>BACKEND - Javascript / AJAX</strong>
+                    <br>
+                        <a href="https://github.com/novaaaax" target="blank">
+                            <i class='fas fa-link fa-1x'></i></a> Edwin Genova<br>
+                        <a href="https://github.com/waltribeiro" target="blank">
+                            <i class='fas fa-link fa-1x'></i></a> Walt Ribeiro<br>
+                </div>
+            
+            <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script rel="javascript" src="js/script.js"></script>
 </body>
