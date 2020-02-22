@@ -115,9 +115,9 @@ a.linkGray {
     background: #c42c00;
 }
 
-.pBlue:hover, .pGray:hover, .pRed:hover {
-    /* animation: move 1s; */
-}
+/* .pBlue:hover, .pGray:hover, .pRed:hover {
+    animation: move 1s;
+} */
 
 .display-4 {
     font-family: ‘Timmana’, sans-serif;
