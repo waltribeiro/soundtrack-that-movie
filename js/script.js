@@ -1,7 +1,7 @@
 var apiKeyYoutube = "AIzaSyCeb5HlrnsOhcdQDoC91dpbZe2Wo_Onibo";
 var apiKeyOMDB = "a648d87c";
 
-// working string = http://www.omdbapi.com/?t=rocky&apikey=a648d87c
+// working string = https://www.omdbapi.com/?t=rocky&apikey=a648d87c
 
 // search button captures the input you type in
 
@@ -12,7 +12,7 @@ document.getElementById('searchButtonForm').addEventListener("submit", function 
   
   
   console.log(searchValue);
-  var omdbQueryURL = "http://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
+  var omdbQueryURL = "https://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
   var searchButton 
   var searchButtonInput
   var searchButtonForm
