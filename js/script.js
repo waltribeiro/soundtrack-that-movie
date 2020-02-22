@@ -25,7 +25,7 @@ document.getElementById('searchButtonForm').addEventListener("submit", function 
   $("#test").removeClass("invisible").addClass("visible")
 
 
-
+////////////
 
   // takes that string and sends it as an API call to OMDB
 
