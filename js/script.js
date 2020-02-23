@@ -1,7 +1,7 @@
 var apiKeyYoutube = "AIzaSyCeb5HlrnsOhcdQDoC91dpbZe2Wo_Onibo";
 var apiKeyOMDB = "a648d87c";
 
-// working string = http://www.omdbapi.com/?t=rocky&apikey=a648d87c
+// working string = https://www.omdbapi.com/?t=rocky&apikey=a648d87c
 
 // search button captures the input you type in
 
@@ -12,7 +12,7 @@ document.getElementById('searchButtonForm').addEventListener("submit", function 
   
   
   console.log(searchValue);
-  var omdbQueryURL = "http://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
+  var omdbQueryURL = "https://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
   var searchButton 
   var searchButtonInput
   var searchButtonForm
@@ -56,7 +56,6 @@ document.getElementById('searchButtonForm').addEventListener("submit", function 
       $('#omdbSoundtrack').append("<br />")
       $('#omdbSoundtrack').append('&nbsp;&nbsp;&nbsp;&nbsp;' + "<a class='linkBlue' href=\"" + fullLink + "\"><i class='fas fa-link fa-1x'></i></a>&nbsp;" + songArray[i] + '<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;' + "<a class='linkGray' href=\"" + fullLink2 + "\"><i class='fas fa-link fa-1x'></i></a>&nbsp;" + songArray2[i] + '<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;' + "<a class='linkRed' href=\"" + fullLink3 + "\"><i class='fas fa-link fa-1x'></i></a>&nbsp;" + songArray3[i]);
     };
-
 
     console.log(videoURL + videoID)
     // console.log(results.items[0].id.videoId);
