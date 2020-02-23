@@ -1,4 +1,4 @@
-var apiKeyYoutube = "AIzaSyCeb5HlrnsOhcdQDoC91dpbZe2Wo_Onibo"
+var apiKeyYoutube = "AIzaSyB9FfvlIamZeXDjFcILSMcQPG8VAmxtjC0"
 var apiKeyOMDB = "a648d87c"
 addClass = ""
 // working string = http://www.omdbapi.com/?t=rocky&apikey=a648d87c
@@ -9,6 +9,7 @@ addClass = ""
 document.getElementById('searchButtonForm').addEventListener("submit", function (event) {
   event.preventDefault();
   var searchValue = document.getElementById("searchButtonInput").value;
+  var youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + searchValue + "%20ost%20single" + "&type=video" + "&key=" + apiKeyYoutube + "&maxResults=5";
   console.log(searchValue);
   var omdbQueryURL = "http://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
   var searchButtonInput = $("#searchButtonInput")
@@ -24,11 +25,35 @@ document.getElementById('searchButtonForm').addEventListener("submit", function 
   //console.log("workingtoo");
   $("#test").removeClass("invisible").addClass("visible")
 
-
-////////////
-
-  // takes that string and sends it as an API call to OMDB
-
+  //takes that string and sends it as an API call to OMDB
+  $.ajax({
+    url: youtubeQueryURL,
+    method: "GET",
+  }).then(function (results) {
+    console.log(results);
+    console.log(youtubeQueryURL);
+    console.log(results.items[0].snippet.title);
+    let songArray = ((results.items[0].snippet.title).split(', '));
+    let songArray2 = ((results.items[1].snippet.title).split(', '));
+    let songArray3 = ((results.items[2].snippet.title).split(', '));
+    var videoURL = 'https://www.youtube.com/watch?v='
+    var videoID = results.items[0].id.videoId;
+    var videoID2 = results.items[1].id.videoId;
+    var videoID3 = results.items[2].id.videoId;
+    var fullLink = videoURL + videoID;
+    var fullLink2 = videoURL + videoID2;
+    var fullLink3 = videoURL + videoID3;
+    $("#omdbSoundtrack").empty();
+    for (let i = 0; i < songArray.length; i++) {
+      $('#omdbSoundtrack').append("<br />")
+      $('#omdbSoundtrack').append('&nbsp;&nbsp;&nbsp;&nbsp;' + "<a class='linkBlue' href=\"" + fullLink + "\"><i class='fas fa-link fa-1x'></i></a>&nbsp;" + songArray[i] + '<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;' + "<a class='linkGray' href=\"" + fullLink2 + "\"><i class='fas fa-link fa-1x'></i></a>&nbsp;" + songArray2[i] + '<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;' + "<a class='linkRed' href=\"" + fullLink3 + "\"><i class='fas fa-link fa-1x'></i></a>&nbsp;" + songArray3[i]);
+    };
+    console.log(videoURL + videoID)
+    // console.log(results.items[0].id.videoId);
+    songArray.onclick = function () {
+      window.open(videoURL + videoID, '_blank');
+    };
+  });
   $.ajax({
     url: omdbQueryURL,
     method: "GET"
@@ -67,8 +92,8 @@ document.getElementById('searchButtonForm').addEventListener("submit", function 
 
 
   var newDiv = document.createElement("div");
+  newDiv.textContent = omdbYearVar;
   $("#omdbYear").append(newDiv);
-
   console.log(searchValue)
 
 

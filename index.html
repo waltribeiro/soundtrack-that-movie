@@ -27,8 +27,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-4 ml-20">
-            <img src="wireframe-whats-that-song-square.png" class="img-fluid" alt="Responsive image">
+        <div class="col-4" style="z-index: 0" data-toggle="modal" data-target="#myModal">
+            <div style="margin-left: 20px;">
+                <span class="pBlue d-inline-block spinAnimation"></span>
+                <span class="pGray d-inline-block spinAnimation"></span>
+                <span class="pRed d-inline-block spinAnimation"></span>
+            </div>
+        </div>
+        <div class="col-4 ml-20 img-fluid">
+            <!-- <img src="wireframe-whats-that-song-square.png" class="img-fluid" alt="Responsive image"> -->
         </div>
     </div>
     <div class="container">
@@ -76,7 +83,7 @@
                                     <li><strong>Year: </strong><span id="omdbYear"></span></li>
                                     <li><strong>Title: </strong><span id="omdbTitle"></span></li>
                                     <li><strong>Soundtrack: </strong><span id="omdbSoundtrack"></span></li>
-                                    <li><strong>Song: </strong><span id="omdbSong"></span></li>
+                                    <!-- <li><strong>Song: </strong><span id="omdbSong"></span></li> -->
                                     <li><strong>Actors: </strong><span id="omdbActors"></span></li>
                                 </ul>
                             </div>
@@ -84,14 +91,49 @@
                     </div>
                 </div>
             </section>
-        </div class="col-xs-12">
-    </div>
+            <!-- </div class="col-xs-12">
+    </div> -->
+            <div id="nameTom"></div>
 
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Development Team</h4>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <strong>FRONTEND - html / css</strong>
+                            <br>
+                            <a href="https://github.com/trionb" target="blank">
+                                <i class='fas fa-link fa-1x'></i></a> Trion Bailey<br>
+                            <a href="https://github.com/tlomax111" target="blank">
+                                <i class='fas fa-link fa-1x'></i></a> Toni Lomax<br>
+                            <br>
+                            <strong>BACKEND - javascript / ajax</strong>
+                            <br>
+                            <a href="https://github.com/novaaaax" target="blank">
+                                <i class='fas fa-link fa-1x'></i></a> Edwin Genova<br>
+                            <a href="https://github.com/waltribeiro" target="blank">
+                                <i class='fas fa-link fa-1x'></i></a> Walt Ribeiro<br>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
 
-    <div id="nameTom"></div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script rel="javascript" src="js/script.js"></script>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script rel="javascript" src="js/script.js"></script>
 </body>
 
 </html>
