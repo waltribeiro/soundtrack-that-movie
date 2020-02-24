@@ -1,41 +1,35 @@
-var apiKeyYoutube = "AIzaSyCeb5HlrnsOhcdQDoC91dpbZe2Wo_Onibo";
-var apiKeyOMDB = "a648d87c";
-
-// working string = https://www.omdbapi.com/?t=rocky&apikey=a648d87c
+var apiKeyYoutube = "AIzaSyB9FfvlIamZeXDjFcILSMcQPG8VAmxtjC0"
+var apiKeyOMDB = "a648d87c"
+addClass = ""
+// working string = http://www.omdbapi.com/?t=rocky&apikey=a648d87c
 
 // search button captures the input you type in
 
+// $('#searchButtonForm').on("submit", );
 document.getElementById('searchButtonForm').addEventListener("submit", function (event) {
   event.preventDefault();
   var searchValue = document.getElementById("searchButtonInput").value;
   var youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + searchValue + "%20ost%20single" + "&type=video" + "&key=" + apiKeyYoutube + "&maxResults=5";
-  
-  
   console.log(searchValue);
-  var omdbQueryURL = "https://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
-  var searchButton 
-  var searchButtonInput
-  var searchButtonForm
-  
+  var omdbQueryURL = "http://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
+  var searchButtonInput = $("#searchButtonInput")
+  if (searchButtonInput.val() === "") {
+
+    return;
+  }
+
   // $(document).on("click", "#searchButton", function() {
-    
-    $(".invisible").removeClass("invisible").addClass("visible");
-     //console.log("working");
+  $("#welcome").empty();
+  //console.log("working")
+  $("#resultInfo").removeClass("invisible").addClass("visible")
+  //console.log("workingtoo");
+  $("#test").removeClass("invisible").addClass("visible")
 
-      // if(searchButtonForm == ""){
-      //   addClass("visible")
-      //    console.log("yes")
-      // }else {
-      //     addClass("invisible")
-      //     console.log("no")
-      // }
-  //console.log(searchButtonForm)
-
-   //takes that string and sends it as an API call to OMDB
+  //takes that string and sends it as an API call to OMDB
   $.ajax({
     url: youtubeQueryURL,
     method: "GET",
-  }).then(function(results){
+  }).then(function (results) {
     console.log(results);
     console.log(youtubeQueryURL);
     console.log(results.items[0].snippet.title);
@@ -49,26 +43,21 @@ document.getElementById('searchButtonForm').addEventListener("submit", function 
     var fullLink = videoURL + videoID;
     var fullLink2 = videoURL + videoID2;
     var fullLink3 = videoURL + videoID3;
-
     $("#omdbSoundtrack").empty();
-
-    for(let i = 0; i < songArray.length; i++) {
+    for (let i = 0; i < songArray.length; i++) {
       $('#omdbSoundtrack').append("<br />")
       $('#omdbSoundtrack').append('&nbsp;&nbsp;&nbsp;&nbsp;' + "<a class='linkBlue' href=\"" + fullLink + "\"><i class='fas fa-link fa-1x'></i></a>&nbsp;" + songArray[i] + '<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;' + "<a class='linkGray' href=\"" + fullLink2 + "\"><i class='fas fa-link fa-1x'></i></a>&nbsp;" + songArray2[i] + '<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;' + "<a class='linkRed' href=\"" + fullLink3 + "\"><i class='fas fa-link fa-1x'></i></a>&nbsp;" + songArray3[i]);
     };
-
     console.log(videoURL + videoID)
     // console.log(results.items[0].id.videoId);
-    
-    songArray.onclick = function(){
+    songArray.onclick = function () {
       window.open(videoURL + videoID, '_blank');
     };
   });
-
   $.ajax({
     url: omdbQueryURL,
     method: "GET"
-  }).then(function(response) {
+  }).then(function (response) {
     // OMDB returns a JSON form
     console.log(response);
     console.log(response.Title);
@@ -76,56 +65,54 @@ document.getElementById('searchButtonForm').addEventListener("submit", function 
     console.log(response.Song);
     console.log((response.Actors).split(', ')); // how do I create elements on a new line?
     $("#omdbActors").empty()
-let actorArray = ((response.Actors).split(', '));
+    let actorArray = ((response.Actors).split(', '));
+    for (let i = 0; i < actorArray.length; i++) {
+      $("#omdbActors").append("<br />&nbsp;&nbsp;&nbsp;&nbsp;")
+      $("#omdbActors").append(actorArray[i]);//this is appending each individual list in the array
+    }
+    $("#omdbYear").text(response.Year)
+    $("#titleEl").text(response.Title)
+    $("#omdbTitle").text(response.Title)
+    $("#omdbPoster").attr("src", response.Poster)
+    // $("#omdbActors").append(response.Actors)//this was appending the array
 
-for (let i = 0; i < actorArray.length; i++) {
-  $("#omdbActors").append("<br />&nbsp;&nbsp;&nbsp;&nbsp;")
-  $("#omdbActors").append(actorArray[i]);//this is appending each individual list in the array
-}
-$("#omdbYear").text(response.Year)
-$("#titleEl").text(response.Title)
-$("#omdbTitle").text(response.Title)
-$("#omdbPoster").attr("src", response.Poster)
-// $("#omdbActors").append(response.Actors)//this was appending the array
 
-
-// if (response.Error = "Something went wrong") {
-//   $("#omdbAlert").text("HELLO");
-// } else if (Error = "Something went wrong") {
-//   $("#omdbAlert").append("MY");
-// } else if (searchValue === "") {
-//   $("#omdbAlert").text("NAME");
-//   console.log("YEAAA");
-// } else {
-//   $("#omdbAlert").text("WALT");
-// }
+    // if (response.Error = "Something went wrong") {
+    //   $("#omdbAlert").text("HELLO");
+    // } else if (Error = "Something went wrong") {
+    //   $("#omdbAlert").append("MY");
+    // } else if (searchValue === "") {
+    //   $("#omdbAlert").text("NAME");
+    //   console.log("YEAAA");
+    // } else {
+    //   $("#omdbAlert").text("WALT");
+    // }
 
   });
 
 
-var newDiv = document.createElement("div");
-newDiv.textContent = omdbYearVar;
-$("#omdbYear").append(newDiv);
-  
+  var newDiv = document.createElement("div");
+  newDiv.textContent = omdbYearVar;
+  $("#omdbYear").append(newDiv);
   console.log(searchValue)
-  
-  
 
-        // takes that string and sends it as an API call to OMDB
 
-        // $.ajax({
-        //   url: omdbQueryURL,
-        //   method: "GET"
-        // }).then(function (response) {
-        //   // OMDB returns a JSON form
-        //   console.log(response);
-        //   console.log(JSON.stringify(response));
-        //   console.log(response.Year);
-        //   $("#titleEl").append(response.Title);
-        //   console.log(response.Soundtrack);
-        //   console.log(response.Song);
-        //   console.log(response.Actors).join("\n");
-        // });
+
+  // takes that string and sends it as an API call to OMDB
+
+  // $.ajax({
+  //   url: omdbQueryURL,
+  //   method: "GET"
+  // }).then(function (response) {
+  //   // OMDB returns a JSON form
+  //   console.log(response);
+  //   console.log(JSON.stringify(response));
+  //   console.log(response.Year);
+  //   $("#titleEl").append(response.Title);
+  //   console.log(response.Soundtrack);
+  //   console.log(response.Song);
+  //   console.log(response.Actors).join("\n");
+  // });
 })
     // });
 
@@ -140,6 +127,3 @@ $("#omdbYear").append(newDiv);
 // use .text to display the results (or .textContent with Javascript)
 
 // .fadeIn( [duration ] [, complete ] )
-
-
-
