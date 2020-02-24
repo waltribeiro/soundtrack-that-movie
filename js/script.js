@@ -11,7 +11,7 @@ document.getElementById('searchButtonForm').addEventListener("submit", function 
   var searchValue = document.getElementById("searchButtonInput").value;
   var youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + searchValue + "%20ost%20single" + "&type=video" + "&key=" + apiKeyYoutube + "&maxResults=5";
   console.log(searchValue);
-  var omdbQueryURL = "http://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
+  var omdbQueryURL = "https://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
   var searchButtonInput = $("#searchButtonInput")
   if (searchButtonInput.val() === "") {
 
