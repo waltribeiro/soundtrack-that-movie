@@ -11,7 +11,7 @@ document.getElementById('searchButtonForm').addEventListener("submit", function 
   var searchValue = document.getElementById("searchButtonInput").value;
   var youtubeQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + searchValue + "%20ost%20single" + "&type=video" + "&key=" + apiKeyYoutube + "&maxResults=5";
   console.log(searchValue);
-  var omdbQueryURL = "http://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
+  var omdbQueryURL = "https://www.omdbapi.com/?t=" + searchValue + "&apikey=" + apiKeyOMDB;
   var searchButtonInput = $("#searchButtonInput")
   if (searchButtonInput.val() === "") {
 
@@ -74,48 +74,10 @@ document.getElementById('searchButtonForm').addEventListener("submit", function 
     $("#titleEl").text(response.Title)
     $("#omdbTitle").text(response.Title)
     $("#omdbPoster").attr("src", response.Poster)
-    // $("#omdbActors").append(response.Actors)//this was appending the array
-
-
-    // if (response.Error = "Something went wrong") {
-    //   $("#omdbAlert").text("HELLO");
-    // } else if (Error = "Something went wrong") {
-    //   $("#omdbAlert").append("MY");
-    // } else if (searchValue === "") {
-    //   $("#omdbAlert").text("NAME");
-    //   console.log("YEAAA");
-    // } else {
-    //   $("#omdbAlert").text("WALT");
-    // }
 
   });
 
-
-  var newDiv = document.createElement("div");
-  newDiv.textContent = omdbYearVar;
-  $("#omdbYear").append(newDiv);
-  console.log(searchValue)
-
-
-
-  // takes that string and sends it as an API call to OMDB
-
-  // $.ajax({
-  //   url: omdbQueryURL,
-  //   method: "GET"
-  // }).then(function (response) {
-  //   // OMDB returns a JSON form
-  //   console.log(response);
-  //   console.log(JSON.stringify(response));
-  //   console.log(response.Year);
-  //   $("#titleEl").append(response.Title);
-  //   console.log(response.Soundtrack);
-  //   console.log(response.Song);
-  //   console.log(response.Actors).join("\n");
-  // });
 })
-    // });
-
 
 // Go through the JSON form and pull data from the Objects
 
