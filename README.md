@@ -1,10 +1,33 @@
 # Sountrack That Movie
 
-## About:
--This is a website desgned to help you find out some basic information about any movie/tv show, and it also allows you to listen to three of the top songs from the soundtrack of that show or movie.
--The wesbsite was thought of, designed and deployed all within a week for a school project by a team of four.
+## About
+-This web app is designed to find the soundtrack to any TV or movie that you search for. Listen to the top 3 search results.
+
+-We planned, designed, programmed, and published this within a week for a school project by a team of four.
 
 
+## Technologies Used
+* BootStrap
+* JavaScript
+* CSS3
+* HTML5
+* jQuery
+* OMDB API
+* Youtube API
 
-### Technologies Used:
-For this application we used BootStrap, JavaScript, CSS3, HTML5, jQuery, OMDB API and Youtube API.
+## Developer Team
+**FRONTEND - html / css**
+
+* Trion Bailey = https://github.com/trionb
+* Toni Lomax = https://github.com/tlomax111
+
+
+**BACKEND - javascript / ajax**
+
+* Edwin Genova = https://github.com/novaaaax
+* Walt Ribeiro = https://github.com/waltribeiro
+
+
+## Screenshot
+
+![image](img/wireframe-whats-that-song-2.png)
