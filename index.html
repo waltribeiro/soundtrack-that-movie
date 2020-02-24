@@ -8,7 +8,7 @@
     <title>Soundtrack That Movie!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="project1.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <script src="https://kit.fontawesome.com/c865f3e4f6.js" crossorigin="anonymous"></script>
 
@@ -22,7 +22,7 @@
     <!-- <div class="container border-bottom"> -->
     <div class="row p-10">
         <div class="col-8" style="z-index: 1">
-            <div class="jumbotron jumbotron-fluid" class="d-flex justify-content-start">
+            <div class="jumbotron jumbotron-fluid d-flex justify-content-start bg-transparent">
                 <div class="text-responsive">
                     <h1 class="display-4">SoundTrack that <span class="display-5">Movie!</span>
                     </h1>
@@ -30,9 +30,10 @@
             </div>
         </div>
         <div class="col-4" style="z-index: 0" data-toggle="modal" data-target="#myModal">
-            <span class="pBlue d-inline-block spinAnimation"></span>
+            <div style="margin-left: 20px;"><span class="pBlue d-inline-block spinAnimation"></span>
             <span class="pGray d-inline-block spinAnimation"></span>
             <span class="pRed d-inline-block spinAnimation"></span>
+            </div>
         </div>
         <div class="col-4 ml-20 img-fluid">
             <!-- <img src="wireframe-whats-that-song-square.png" class="img-fluid" alt="Responsive image"> -->
@@ -130,16 +131,16 @@
 
 </div>
 
-</body>
-</html>
 
 
 
 
 
-
-
-
+<div class="footer align-bottom" style="font-size:20px;margin:auto; vertical-align: middle">
+    <button  style="margin-top:10px;" type="button" class="btn btn-light"><a href="https://github.com/novaaaax/soundtrack-that-movie">
+        <span class="text-dark">Github Repo</span></a>
+    </button>
+</div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
