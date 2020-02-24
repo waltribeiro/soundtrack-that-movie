@@ -27,6 +27,10 @@
 * Edwin Genova = https://github.com/novaaaax
 * Walt Ribeiro = https://github.com/waltribeiro
 
+## Licenses
+
+OMDB API by Brian Fritz. Licensed under CC BY-NC 4.0.
+
 
 ## Screenshot
 
