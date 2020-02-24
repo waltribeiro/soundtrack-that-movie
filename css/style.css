@@ -182,7 +182,7 @@ a.linkGray {
     }
 
     .pBlue, .pGray, .pRed {
-        opacity: .8;
+        opacity: 1;
         z-index: -4;
     }
 
@@ -190,6 +190,16 @@ a.linkGray {
         font-size: 50px;
         padding: 0px 0px 0px 0px;
         width:100%;
+    }
+
+    img {
+        width: 80%;
+        text-align: center;
+        position: relative;
+        top: 45%;
+        left: 0;
+        margin:auto;
+        margin-left:70px;
     }
 
 }
@@ -200,7 +210,7 @@ a.linkGray {
     }
 
     .pBlue {
-        opacity: .65;
+        opacity: 1;
         z-index: -4;
         width: 15px;
         height: 90px;
@@ -211,7 +221,7 @@ a.linkGray {
     }
     
     .pGray {
-        opacity: .65;
+        opacity: 1;
         z-index: -4;
         width: 15px;
         height: 90px;
@@ -220,7 +230,7 @@ a.linkGray {
     }
     
     .pRed {
-        opacity: .65;
+        opacity: 1;
         z-index: -4;
         width: 15px;
         height: 90px;
@@ -238,6 +248,16 @@ a.linkGray {
         height: 120px !important;
     }
 
+    img {
+        width: 70%;
+        text-align: center;
+        position: relative;
+        top: 45%;
+        left: 0;
+        margin:auto;
+        margin-left:70px;
+    }
+
 }
 
 @media only screen and (max-width: 610px) {
@@ -246,7 +266,7 @@ a.linkGray {
     }
 
     .pBlue {
-        opacity: .5;
+        opacity: 1;
         z-index: -4;
         width: 10px;
         height: 60px;
@@ -257,7 +277,7 @@ a.linkGray {
     }
     
     .pGray {
-        opacity: .5;
+        opacity: 1;
         z-index: -4;
         width: 10px;
         height: 60px;
@@ -266,7 +286,7 @@ a.linkGray {
     }
     
     .pRed {
-        opacity: .5;
+        opacity: 1;
         z-index: -4;
         width: 10px;
         height: 60px;
@@ -300,6 +320,16 @@ margin: auto;
 
     .row, .p-10 {
         height: 60px !important;
+    }
+
+    img {
+        width: 60%;
+        text-align: center;
+        position: relative;
+        top: 45%;
+        left: 0;
+        margin:auto;
+        margin-left:70px;
     }
 
 }
