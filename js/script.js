@@ -1,4 +1,4 @@
-var apiKeyYoutube = "AIzaSyB9FfvlIamZeXDjFcILSMcQPG8VAmxtjC0"
+var apiKeyYoutube = "AIzaSyD7COoXmTlxzGMduRns7lWY6aCROVbuXHI"
 var apiKeyOMDB = "a648d87c"
 addClass = ""
 // working string = http://www.omdbapi.com/?t=rocky&apikey=a648d87c
